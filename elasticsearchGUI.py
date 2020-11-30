@@ -1,10 +1,12 @@
 from tkinter import *
 from elasticsearch import Elasticsearch
 
+# Create a window
 master = Tk() 
 master.title('Elasticsearch Interface')
 master.geometry('800x600') 
 
+# Retrieve the elasticsearch results
 def elasticsearch(query):
     result = ''
     es = Elasticsearch()
@@ -42,32 +44,33 @@ def elasticsearch(query):
         # result += ("\nTitle: %(title)s\nAuthor: %(author)s\nYear: %(year)s\nOrigin: %(origin)s\nGenre: %(genre)s\nURL: %(url)s\n" % hit["_source"])
     return result
 
+# Put the elasticsearch results to the window
 def showSearchResults():
-    # message.set('')
     query = query_text.get()
     result = elasticsearch(query)
     results_label.delete('1.0', END)
     results_label.insert(END, result)
   
-# label widget 
+# Search label widget
 search_label = Label(master, text = "Keyword: ") 
 search_label.place(relx = 0.23, y = 12, anchor = NW) 
 
-# text widget 
+# Query text field widget 
 query = StringVar()
 query_text = Entry(master, textvariable=query, width = 50) 
 query_text.place(relx = 0.5, y = 5, rely = 0.028, anchor = CENTER)
 
-# button widget 
+# Search button widget 
 search_button = Button(master, text = "Search", command = showSearchResults) 
 search_button.place(relx = 0.77, y = 9, anchor = NE)
 
-
+# Results text field widget 
 results = StringVar()
 results_label = Text(master, width = 80, height = 30)
 results.set('Results will be shown here.')
 results_label.place(relx = 0.5, rely = 0.5, anchor = CENTER)
 
+# Scrollbar of the results text field
 scrollbar = Scrollbar(master)
 scrollbar.pack(side=RIGHT, fill=Y)
 results_label.config(yscrollcommand=scrollbar.set)
