@@ -103,9 +103,13 @@ search system is simple to use, useful for novel readers, and it works for most 
 
 ## References
 [1] The Editors of Encyclopaedia Britannica, "The Tale of Genji," Britannica, 27 March 2020. [Online]. Available: https://www.britannica.com/topic/The-Tale-of-Genji. [Accessed 06 December 2020].
+
 [2] C. Dictionary, "novel," Cambridge, [Online]. Available: https://dictionary.cambridge.org/dictionary/english/novel. [Accessed 6 December 2020].
+
 [3] Library of Congress, "Finding Novels," Library of Congress, [Online]. Available: https://guides.loc.gov/lost-titles-forgotten-rhymes/finding-novels. [Accessed 6 December 2020].
+
 [4] webscraper.io, "Web Scraper," webscraper.io, [Online]. Available: https://webscraper.io/. [Accessed 2 December 2020].
+
 [5] elastic, "Elasticsearch," elastic, [Online]. Available: https://www.elastic.co/what- is/elasticsearch. [Accessed 6 December 2020].
 
 ## Appendices
@@ -170,6 +174,7 @@ curl -H "Content-Type:application/x-ndjson" -X POST http://localhost:9200/novels
 ```
 
 ### Appendix C Search Query
+```
 GET novels/_search
 {
   "_source": [
@@ -198,19 +203,23 @@ GET novels/_search
     }
   }
 }
+```
 
 ### Appendix D: Elasticsearch Interface
-
+![Screen Shot 2022-02-16 at 11 05 33 PM](https://user-images.githubusercontent.com/48952397/154307459-de812940-d24b-44de-9ea5-22c96fa5c1d0.png)
 
 ### Appendix E: Relevant Results
 1. Romeo
 
+![Screen Shot 2022-02-16 at 11 05 57 PM](https://user-images.githubusercontent.com/48952397/154307487-f84349bf-31d3-4874-bb29-57055e108c75.png)
 
 2. Julet
 
+![Screen Shot 2022-02-16 at 11 06 12 PM](https://user-images.githubusercontent.com/48952397/154307504-a4caba7e-9d57-46fe-adf5-ccd1139a56c3.png)
 
 3. Adventure in America
 
+![Screen Shot 2022-02-16 at 11 06 23 PM](https://user-images.githubusercontent.com/48952397/154307520-edb51da7-faec-4feb-b10e-e2ed18893240.png)
 
 ### Appendix F Irrelevant Result
- 
+![Screen Shot 2022-02-16 at 11 06 32 PM](https://user-images.githubusercontent.com/48952397/154307536-863688d4-29c2-46c3-909d-4bcb58092740.png)
