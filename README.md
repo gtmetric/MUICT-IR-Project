@@ -110,7 +110,7 @@ search system is simple to use, useful for novel readers, and it works for most 
 
 [4] webscraper.io, "Web Scraper," webscraper.io, [Online]. Available: https://webscraper.io/. [Accessed 2 December 2020].
 
-[5] elastic, "Elasticsearch," elastic, [Online]. Available: https://www.elastic.co/what- is/elasticsearch. [Accessed 6 December 2020].
+[5] elastic, "Elasticsearch," elastic, [Online]. Available: https://www.elastic.co/what-is/elasticsearch. [Accessed 6 December 2020].
 
 ## Appendices
 ### Appendix A: Elasticsearch Indexing
